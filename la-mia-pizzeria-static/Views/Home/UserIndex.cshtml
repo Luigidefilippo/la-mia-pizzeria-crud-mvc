@@ -1,0 +1,106 @@
+﻿@page
+@model la_mia_pizzeria_static.Views.Home.UserIndexModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UserPage</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="~/css/userpage.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <input type="checkbox" id="nav-toggle" />
+   <div class="sidebar_ms">
+       <div class="sidebar-brand">
+            <h1><span class="lab la-accusoft"></span>PanicPizza</h1>
+       </div>
+       <div class="sidebar-menu">
+           <ul>
+               <li>
+                    <a class="active" href=""><span class="las la-igloo"></span> <span>Dashboard</span></a>
+               </li>
+
+                <li>
+                    <a href=""><span class="las la-users"></span> <span>Customers</span></a>
+                </li>
+
+                <li>
+                    <a href=""><span class="las la-user-circle"></span> <span>Stats</span></a>
+                </li>
+
+                <li>
+                    <a href="/Home/Menu"><span class="las la-apple-alt"></span> <span>Menu</span></a>
+                </li>
+           </ul>
+       </div>
+   </div>
+   <div class="main-content">
+       <header>
+           <h3>
+               <label for="nav-toggle">
+                    <a href="/"><i class="las la-sign-out-alt"></i></a>
+                </label>
+               Exit
+           </h3>
+           <div class="search-wrapper">
+               <span class="las la-search"></span>
+               <inpt type="text">Search now</inpt>
+           </div>
+           <div class="user-wrapper">
+               <img  src="" alt="" width="40px" height="30px" />
+               <div>
+                   <h4>Luigi</h4>
+                   <small>Admin</small>
+               </div>
+           </div>
+       </header>
+       <main>
+           <div class="cards">
+               <div class="card-single">
+                   <div>
+                       <h1>54</h1>
+                       <span>Customers</span>
+                   </div>
+                   <div>
+                        <span class ="las la-users"></span>
+                   </div>
+               </div>
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Project</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>124</h1>
+                        <span>Orders</span>
+                    </div>
+                    <div>
+                        <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>6k</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="lab la-google-wallet"></span>
+                    </div>
+                </div>
+           </div>
+           
+       </main>
+   </div>
+</body>
+</html>
