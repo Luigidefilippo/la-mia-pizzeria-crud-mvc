@@ -3,6 +3,15 @@
 @{
     Layout = null;
 }
+@{
+    List<Pizza> adminPizzaList = new List<Pizza>();
+    adminPizzaList.Add(new Pizza(1, "Margherita", "Pomodoro, fior di latte e basilico", "PANICPIZZA.jpg", 12.50f));
+    adminPizzaList.Add(new Pizza(2, "Diavola", "Pomodoro, fior di latte e piccante", "PANICPIZZA (1).jpg", 14.50f));
+    adminPizzaList.Add(new Pizza(3, "Saporita", "Fior di latte, crudo, rucole e scaglie di parmigiano", "PANICPIZZA (2).jpg", 22.50f));
+    adminPizzaList.Add(new Pizza(4, "Funghi", "Fior di latte, funghi e prosciutto cotto", "PANICPIZZA (3).jpg", 33.50f));
+
+
+}
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,28 +30,29 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Foto</th>
-                    <th>Prezzo</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Immagine</th>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Descrizione</th>
+                    <th scope="col">Prezzo</th>
+
                 </tr>
             </thead>
             <tbody>
-                <!-- Riga 1 - Pizza 1 -->
-                <tr>
-                    <td>Pizza Margherita</td>
-                    <td>Una pizza classica con pomodoro, mozzarella e basilico fresco.</td>
-                    <td><img src="~/img/PANICPIZZA (1).png" alt="Pizza Margherita" width="100"></td>
-                    <td>$10.99</td>
-                </tr>
-                <!-- Riga 2 - Pizza 2 -->
-                <tr>
-                    <td>Pizza Pepperoni</td>
-                    <td>Una pizza abbondante con peperoni e formaggio fuso.</td>
-                    <td><img src="~/img/PANICPIZZA (4).png" alt="Pizza Pepperoni" width="100"></td>
-                    <td>$12.99</td>
-                </tr>
-                <!-- Aggiungi altre righe per altre pizze -->
+                @foreach (Pizza pizza in adminPizzaList)
+                {
+                    <tr>
+                        <th scope="row">@pizza.Id</th>
+                        <td><img class="w-25" src="~/img/PANICPIZZA (1).png" alt="Margherita" /></td>
+                        <td>@pizza.Name</td>
+                        <td>@pizza.Description</td>
+                        <td>@pizza.Price</td>
+                        <td>
+                            <a class="btn btn-primary" href="@Url.Action("Details", "Pizza", new{id=pizza.Id})">Dettagli della pizza</a>
+                        </td>
+                    </tr>
+                }
+
             </tbody>
         </table>
     </div>
