@@ -15,6 +15,7 @@
     --big-font: 4.5rem;
     --h2-font: 2.6rem;
     --p-font: 1.1rem;
+    --a-color: withe;
 }
 
 body {
@@ -75,11 +76,11 @@ span{
 	margin-right: 15px;
 	margin-left: 8px;
 }
-.h-icons a {
-    color:black;
-    font-weight:700;
-    text-decoration:none;
-}
+    .h-icons a {
+        color: var(--bg-color);
+        font-weight: 700;
+        text-decoration: none;
+    }
 
 #menu-icon{
 	font-size: 32px;
@@ -91,7 +92,6 @@ span{
 section {
     padding: 90px 15% 80px;
 }
-
 .home {
     height: 88vh;
     width: 100%;

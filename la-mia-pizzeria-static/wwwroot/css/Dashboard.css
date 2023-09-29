@@ -88,10 +88,11 @@ span {
         font-weight: 700;
         text-decoration: none;
     }
-    .hero{
-        position:relative;
-        background:red;
-    }
+
+.hero {
+    position: relative;
+    background: red;
+}
 
 .h-icons {
     display: flex;
