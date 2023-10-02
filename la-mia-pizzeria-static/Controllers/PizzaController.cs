@@ -48,7 +48,7 @@ namespace la_mia_pizzeria_static.Controllers
                 db.pizze.Add(nuovaPizza);
                 db.SaveChanges();
 
-                return RedirectToAction("Index" , db.pizze.ToList<Pizza>());
+                return View ("Index" , db.pizze.ToList<Pizza>());
             }
         }
     }
