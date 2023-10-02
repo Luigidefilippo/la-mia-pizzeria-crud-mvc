@@ -70,24 +70,24 @@ span{
 	background: var(--main-color);
 	border-radius: 5rem;
 }
-.h-icons i{
-	font-size: 22px;
-	color: var(--bg-color);
-	margin-right: 15px;
-	margin-left: 8px;
-}
-    .h-icons a {
+    .h-icons i {
+        font-size: 22px;
         color: var(--bg-color);
+        margin-right: 15px;
+        margin-left: 8px;
+    }
+    .h-icons a {
+        color:white;
         font-weight: 700;
         text-decoration: none;
     }
 
-#menu-icon{
-	font-size: 32px;
-	color: var(--bg-color);
-	z-index: 10001;
-	cursor: pointer;
-	display: none;
+#menu-icon {
+    font-size: 32px;
+    color: var(--bg-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
 }
 section {
     padding: 90px 15% 80px;

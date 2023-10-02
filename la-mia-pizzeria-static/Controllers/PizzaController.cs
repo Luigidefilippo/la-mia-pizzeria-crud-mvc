@@ -22,7 +22,7 @@ namespace la_mia_pizzeria_static.Controllers
                 Pizza? pizzaTrovata = db.pizze.Where(pizza => pizza.Id == id).FirstOrDefault();
                 if(pizzaTrovata == null)
                 {
-                    return NotFound($"La pizza con {id} non è nel nostro menù");
+                    return View("NotFound");
                 }else
                 {
                     return View("DettagliPizza", pizzaTrovata);
