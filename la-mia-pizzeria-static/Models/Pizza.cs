@@ -15,7 +15,7 @@ namespace la_mia_pizzeria_static.Models
         [MaxLength(200, ErrorMessage =" La descrizione inserita supera il limite di caratteri")]
         public string Description { get; set; }
         public string Pathimg { get; set; }
-        [Range(1 , 50)]
+        [Range(4 , 50)]
         public float Price { get; set; }
 
         //Costruttore vuoto 

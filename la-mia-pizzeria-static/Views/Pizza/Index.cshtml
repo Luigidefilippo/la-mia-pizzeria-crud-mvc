@@ -52,7 +52,14 @@
                                     <td>@pizza.Description</td>
                                     <td>@pizza.Price</td>
                                     <td>
-                                        <a class="btn btn-primary" href="@Url.Action("Details", "Pizza", new{id=pizza.Id})">Dettagli della pizza</a>
+                                        <a class="btn btn-primary m-3" href="@Url.Action("Dettagli", "Pizza", new{id=pizza.Id})">Dettagli della pizza</a>
+                                        <a class="btn btn-warning m-3" href="@Url.Action("AggiornaPizza", "Pizza", new{id=pizza.Id})">Modifica la pizza</a>
+                                        <form asp-controller="Pizza" asp-action="CancellaPizza" asp-route-id="@pizza.Id" method="post">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-danger m-3">
+                                                Cancella
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             }
