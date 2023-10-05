@@ -37,6 +37,7 @@
                                 <th scope="col">Immagine</th>
                                 <th scope="col">Titolo</th>
                                 <th scope="col">Descrizione</th>
+                                <th scope="col">Categoria</th>
                                 <th scope="col">Prezzo</th>
                                 <th scope="col">Azioni</th>
 
@@ -50,6 +51,7 @@
                                     <td><img class="w-50" src="@pizza.Pathimg" alt="@pizza.Name" /></td>
                                     <td>@pizza.Name</td>
                                     <td>@pizza.Description</td>
+                                    <td>@(pizza.Categoria?.Name?? "Nessuan categoria presente ")</td>
                                     <td>@pizza.Price</td>
                                     <td>
                                         <a class="btn btn-primary m-3" href="@Url.Action("Dettagli", "Pizza", new{id=pizza.Id})">Dettagli della pizza</a>

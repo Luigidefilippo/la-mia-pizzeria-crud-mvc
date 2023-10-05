@@ -1,4 +1,4 @@
-﻿@model Pizza
+﻿@model PizzaFormModel
 @{
     Layout = null;
 }
@@ -24,23 +24,37 @@
                 @Html.AntiForgeryToken()
                 <div class="mb-3">
                     <strong>Titolo:</strong>
-                    <input type="text" class="form-control" asp-for="Name">
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Pizza.Name">
+                    <span asp-validation-for="Pizza.Name" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <strong>Descrizione:</strong>
-                    <input type="text" class="form-control" asp-for="Description">
-                    <span asp-validation-for="Description" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Pizza.Description">
+                    <span asp-validation-for="Pizza.Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <strong>Categoria:</strong>
+                    <select asp-for="Pizza.CategoriaId" rows="10" class="d-block w-100">
+                        <option value="">
+                            Seleziona la categoria della pizza
+                        </option>
+                        @foreach (Categoria categoria in Model.Categorie)
+                        {
+                            <option value="@categoria.Id">
+                                @categoria.Name
+                            </option>
+                        }
+                    </select>
                 </div>
                 <div class="mb-3">
                     <strong>URL Immagine:</strong>
-                    <input type="text" class="form-control" asp-for="Pathimg">
-                    <span asp-validation-for="Pathimg" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Pizza.Pathimg">
+                    <span asp-validation-for="Pizza.Pathimg" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <strong>Prezzo</strong>
-                    <input type="text" class="form-control" asp-for="Price">
-                    <span asp-validation-for="Price" class="text-danger"></span>
+                    <input type="text" class="form-control" asp-for="Pizza.Price">
+                    <span asp-validation-for="Pizza.Price" class="text-danger"></span>
                 </div>
                 <button type="submit" class="btn btn-primary">Crea questa Pizza</button>
             </form>

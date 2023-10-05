@@ -26,6 +26,17 @@
                     <h3>Titolo: <span>@Model.Name</span></h3>
 
                 </div>
+                <p>
+                    <strong>Categoria:</strong>
+                    @if (Model.Categoria != null)
+                    {
+                        <span>@Model.Categoria.Name</span>
+                    }
+                    else
+                    {
+                        <span>Nessuna categoria associata</span>
+                    }
+                </p>
                 <div class="single_pizza">
                     <img class="w-50 border border-danger" src="@Model.Pathimg">
                 </div>
