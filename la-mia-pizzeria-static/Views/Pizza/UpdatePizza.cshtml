@@ -52,6 +52,15 @@
                     </select>
                 </div>
                 <div class="mb-3">
+                    <strong>Gusti:</strong>
+                    <select asp-for="gustoIdSelezionato"
+                            multiple="multiple"
+                            size="10"
+                            class="form-control mb-2 mr-sm-2 ml-sm-3 leftList"
+                            asp-items="@Model.Gusti">
+                    </select>
+                </div>
+                <div class="mb-3">
                     <strong>URL Immagine:</strong>
                     <input type="text" class="form-control" asp-for="Pizza.Pathimg">
                     <span asp-validation-for="Pizza.Pathimg" class="text-danger"></span>

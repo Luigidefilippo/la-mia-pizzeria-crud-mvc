@@ -37,6 +37,24 @@
                         <span>Nessuna categoria associata</span>
                     }
                 </p>
+                <p>
+                    <strong>
+                        Gusti:
+                    </strong>
+                    @if (Model.Gusti != null && Model.Gusti.Count > 0)
+                    {
+                        <ul>
+                            @foreach (Gusto gusti in Model.Gusti)
+                            {
+                                <li>@gusti.Name</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span>Non hai associato alcun gusto a questa pizza!</span>
+                    }
+                    </p>
                 <div class="single_pizza">
                     <img class="w-50 border border-danger" src="@Model.Pathimg">
                 </div>
