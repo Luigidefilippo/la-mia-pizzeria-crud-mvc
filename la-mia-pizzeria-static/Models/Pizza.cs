@@ -21,6 +21,8 @@ namespace la_mia_pizzeria_static.Models
         public int? CategoriaId { get; set; }
         public Categoria? Categoria { get; set; }
 
+        public List<Gusto>? Gusti { get; set; }
+
         //Costruttore vuoto 
         public Pizza() { }
         public Pizza(int id, string name, string description, string pathimg, float price)
